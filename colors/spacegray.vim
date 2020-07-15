@@ -72,7 +72,7 @@ hi SpecialKey      ctermbg=NONE ctermfg=59     guibg=NONE     guifg=#4C5966  cte
 hi Statement       ctermbg=NONE ctermfg=13     guibg=NONE     guifg=#A57A9E  cterm=NONE      gui=NONE
 hi String          ctermbg=NONE ctermfg=107    guibg=NONE     guifg=#95B47B  cterm=NONE      gui=NONE
 hi Type            ctermbg=NONE ctermfg=179    guibg=NONE     guifg=#E5C078  cterm=NONE      gui=NONE
-
+" #A57A9E
 hi Cursor          ctermbg=NONE ctermfg=NONE   guibg=#6C6C6C  guifg=NONE     cterm=NONE      gui=NONE
 hi CursorColumn    ctermbg=0    ctermfg=NONE   guibg=#303030  guifg=NONE     cterm=NONE      gui=NONE
 hi CursorLine      ctermbg=0    ctermfg=NONE   guibg=#303030  guifg=NONE     cterm=NONE      gui=NONE
@@ -156,7 +156,11 @@ hi SpellBad        ctermbg=52   ctermfg=9      guibg=#5F0000  guifg=#CC6666  cte
 hi SpellRare       ctermbg=53   ctermfg=13     guibg=#5F005F  guifg=#B294BB  cterm=NONE      gui=NONE
 hi SpellCap        ctermbg=17   ctermfg=12     guibg=#00005F  guifg=#81A2BE  cterm=NONE      gui=NONE
 hi SpellLocal      ctermbg=24   ctermfg=14     guibg=#005F5F  guifg=#8ABEB7  cterm=NONE      gui=NONE
+hi EnumConstant    guifg=#FFFFFF
+hi Attribute       guifg=#303030
 
+hi link LspCxxHlGroupEnumConstant EnumConstant
+hi link LspCxxHlSymField Normal
 " Highlights {{{1
 hi link Boolean             Constant
 hi link Character           Constant
@@ -169,6 +173,7 @@ hi link Include             Preproc
 hi link Macro               Preproc
 hi link PreCondit           PreProc
 
+
 hi link Conditional         Statement
 hi link Exception           Statement
 hi link HelpCommand         Statement
@@ -178,9 +183,10 @@ hi link Label               Statement
 hi link Operator            Statement
 hi link Repeat              Statement
 
-hi link StorageClass        Type
+hi link StorageClass        Statement
 hi link Structure           Type
-hi link Typedef             Type
+hi link Typedef             Constant
+hi link TypeSpecifier       Statement
 
 hi link Debug               Special
 hi link Delimiter           Special
